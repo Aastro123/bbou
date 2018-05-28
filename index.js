@@ -76,9 +76,7 @@ bot.on('message', message => {
    
    
    
-   else if(message.content.startsWith('bblop')) {
-   
-       else {	
+   else if(message.content.startsWith('bblop')) {	
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
@@ -97,7 +95,7 @@ bot.on('message', message => {
 			  	message.reply('Tu as crus frère')	
 			}
     
-    		   }
+    		   
 
 
    
