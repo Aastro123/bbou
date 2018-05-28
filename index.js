@@ -21,7 +21,7 @@ bot.on('ready', () => {
   // console.log('Name: ${bot.guilds.name}');
   // console.log('Name: ${bot.guilds.id}');
   // console.log('How many member: ${guilds.memberCount}');
-   bot.user.setActivity('');
+   bot.user.setActivity('discord.js update', {type: "PLAYING"});
   });
 
 client.on('message', msg => {
