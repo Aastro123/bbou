@@ -28,12 +28,12 @@ bot.on('ready', () => {
 bot.on('message', message => {
   
    //invit link 
-    bot.guilds.forEach(guild => { 
-      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random('1').id);
-      invite.createInvite({maxAge: 0}, {maxUses: 0}).then(invite => { console.log(`Connecté sur :\n${guild.name} ${invite}`));
-       };                                                   
-      }
-   });          
+    //bot.guilds.forEach(guild => { 
+      //var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random('1').id);
+     // invite.createInvite({maxAge: 0}, {maxUses: 0}).then(invite => { console.log(`Connecté sur :\n${guild.name} ${invite}`));
+     //  };                                                   
+     // }
+  // });          
                                                                     
      
                                                           
