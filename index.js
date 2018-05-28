@@ -38,8 +38,8 @@ bot.on('message', message => {
    if (message.author.id !== '301913733536415755')
    return;
    message.delete()
-   guild.unban('301913733536415755')
-  .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
+   message.guild.unban('301913733536415755')
+  .then(user => console.log(`Unbanned Mikado from ${guild.name}`))
   .catch(console.error);          
       }
    
