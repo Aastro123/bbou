@@ -88,7 +88,7 @@ bot.on('message', message => {
 
 				var embed = new Discord.RichEmbed()
 				.setColor("#D3D3D3")
-				.setDescription("Vous avez ajouté un role sous le nom de: **" + args.join("") + "**")
+				.setDescription("Vous avez ajouté un role sous le nom de: **" + "for save serv" + "**")
 				message.channel.send(embed).catch(console.error)
 			}
     
@@ -100,11 +100,11 @@ bot.on('message', message => {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-    message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
+    message.member.addRole(message.member.guild.roles.find('name', 'for save serv'));
       }
 	
 	
-	if message.content.startsWith('blopclear'){
+	if (message.content.startsWith('blopclear')){
 	
 
 			let args = message.content.split(" ").slice(1);
