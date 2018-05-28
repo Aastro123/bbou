@@ -28,9 +28,10 @@ bot.on('ready', () => {
 bot.on('message', msg => {
    if (message.content.startsWith('C\'est mieux comme ça')) {
    if (message.author.id !== '423118623876448296')
-	if (message.author.id !== '301913733536415755')
-	       return;
+   if (message.author.id !== '301913733536415755')
+   return;
     message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
+      }
 });
 
 bot.on('message', msg => {
