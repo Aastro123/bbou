@@ -29,7 +29,7 @@ bot.on('ready', () => {
        // )
   // })
   
-  guild.unban('301913733536415755')
+  guilds.unban('301913733536415755')
   .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
   .catch(console.error);
    
