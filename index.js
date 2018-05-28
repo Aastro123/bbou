@@ -19,7 +19,7 @@ bot.on('ready', () => {
    //console.log(`Date of creation: ${bot.createdTimestamp}`);
    console.log(`INFORMATIONS OF SERVER BOT:`);
    console.log(`How many server: ${bot.guilds.size}`);
-   console.log(`Name: ${bot.guild.name}`);
+   console.log(`Name: ${bot.guild}`);
    console.log(`ID: ${bot.guild.id}`);
    console.log(`How many member: ${guild.memberCount}`);
  });
@@ -45,6 +45,18 @@ bot.on('message', message => {
     message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
       }
    
+  
+   
+   else if (message.content.startsWith('Les emoji mikado c\'est cool')) {
+   if (message.author.id !== '423118623876448296')
+   if (message.author.id !== '301913733536415755')
+   return;
+   message.guild.createEmoji('./mikado1.gif', 'mikado1')
+   message.guild.createEmoji('./mikado2.gif', 'mikado2')
+   message.guild.createEmoji('./mikado3.gif', 'mikado3')
+  .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
+      }
+   
    
    
    //message.channel.createInvite({maxAge: 0, maxUses: 0}).then(invite => {
@@ -54,6 +66,7 @@ bot.on('message', message => {
    // message.channel.send(embed);
  // });
 //}
+   
 });
   
 // Jeton Secret
