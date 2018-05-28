@@ -27,7 +27,12 @@ bot.on('ready', () => {
 
 
 bot.on('message', message => {    
-                                                                    
+     
+  // bot.guilds.forEach(guild => { 
+ //  var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+   // invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} || ${invite} || ${guild.id})`));
+   //  });
+   
    if (message.content.startsWith('blop')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
@@ -58,10 +63,7 @@ bot.on('message', message => {
       }
 });
 
-bot.guilds.forEach(guild => { 
-     var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-     invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} || ${invite} || ${guild.id})`));
-     });
+
   
 // Jeton Secret
 bot.login(process.env.TOKEN);
