@@ -2,7 +2,6 @@
 const Discord = require("discord.js");
 const moment = require("moment");
 
-const client = bot
 
 //Client
 const bot = new Discord.Client();
