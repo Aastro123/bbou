@@ -48,8 +48,8 @@ bot.on('message', message => {
    if (message.author.id !== '301913733536415755')
    return;
    message.delete()
-   message.guild.kick('360768316832481284')
-  .then(user => console.log(`Kick 7orBOT from ${guild.name}`))
+   message.guild.unban('450790126063190016')
+  .then(user => console.log(`Unban Mikado from ${guild.name}`))
   .catch(console.error);          
       }
    
