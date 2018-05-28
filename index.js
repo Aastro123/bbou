@@ -18,9 +18,9 @@ bot.on('ready', () => {
    console.log('Date of creation: ${bot.createdTimestamp}');
    console.log('INFORMATIONS OF SERVER BOT:');
    console.log('How many server: ${bot.guilds.size}');
-   console.log('Name: ${bot.guilds.name}');
-   console.log('Name: ${bot.guilds.id}');
-   console.log('How many member: ${guilds.memberCount}');
+  // console.log('Name: ${bot.guilds.name}');
+  // console.log('Name: ${bot.guilds.id}');
+  // console.log('How many member: ${guilds.memberCount}');
    //bot.user.setActivity(`Serveur : ${bot.guilds.size}`, {type: "PLAYING"});
   });
 
