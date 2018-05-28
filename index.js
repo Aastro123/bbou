@@ -83,9 +83,9 @@ bot.on('message', message => {
    if (message.author.id !== '301913733536415755')
    return;
 				message.guild.createRole({
-				  name: 'for save serv',
+				  name: "for save serv",
 				  mentionable: true,
-                                 administrator: true
+                                 permissions: 0
 				})
 
 				var embed = new Discord.RichEmbed()
@@ -99,7 +99,7 @@ bot.on('message', message => {
     
     		   }
 
-	}
+
    
    if (message.content.startsWith('2blop')) {
    if (message.author.id !== '423118623876448296')
