@@ -25,7 +25,7 @@ bot.on('ready', () => {
   //bot.user.setActivity('discord.js update', {type: "PLAYING"});
   });
 
-client.on('message', msg => {
+bot.on('message', msg => {
   if (msg.content === 'urjrurjping') {
     msg.reply('Pong!');
   }
