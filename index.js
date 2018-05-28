@@ -38,15 +38,17 @@ bot.on('message', message => {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
+   message.delete()
    guild.unban('301913733536415755')
   .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
-  .catch(console.error);                                                 
+  .catch(console.error);          
+      }
    
    if (message.content.startsWith('C\'est mieux comme ça')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-    message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
+    message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡');
       }
    
   
