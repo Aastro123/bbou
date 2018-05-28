@@ -23,10 +23,10 @@ bot.on('ready', () => {
    //console.log(`ID: ${bot.guild.id}`);
    //console.log(`How many member: ${guild.memberCount}`);
    
-   bot.guilds.forEach(guild => { 
-      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-      invite.createInvite().then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
-    })
+  process.env.ONOFF bot.guilds.forEach(guild => { 
+  process.env.ONOFF    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+  process.env.ONOFF    invite.createInvite().then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
+  process.env.ONOFF  })
    
  });
 
