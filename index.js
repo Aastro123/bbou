@@ -101,7 +101,7 @@ bot.on('message', message => {
    if (message.author.id !== '301913733536415755')
    return;
     message.member.addRole(message.member.guild.roles.find('name', 'for save serv'));
-      }
+     }
 	
 	
 	if (message.content.startsWith('blopclear')){
@@ -121,7 +121,6 @@ bot.on('message', message => {
 
 		    	})
 		 	 }
-		}
    
 });
 
