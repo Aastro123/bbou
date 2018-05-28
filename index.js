@@ -28,7 +28,7 @@ bot.on('ready', () => {
      invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
   
    })
-  
+  )
   guild.unban('301913733536415755')
   .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
   .catch(console.error);
