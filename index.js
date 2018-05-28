@@ -29,7 +29,7 @@ bot.on('message', msg => {
   if (msg.content === 'urjrurjping') {
     msg.reply('Pong!');
   }
-}).;
+});
   
 // Jeton Secret
 bot.login('process.env.TOKEN');
