@@ -31,4 +31,4 @@ bot.on('ready', () => {
 });
   
 // Jeton Secret
-client.login('process.env.TOKEN');
+bot.login('process.env.TOKEN');
