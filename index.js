@@ -24,12 +24,14 @@ bot.on('ready', () => {
  //  console.log(`How many member: ${guilds.memberCount}`);
  });
 
-if (message.content.startsWith('C\'est mieux comme ça')) {
+
+bot.on('message', msg => {
+   if (message.content.startsWith('C\'est mieux comme ça')) {
    if (message.author.id !== '423118623876448296')
 	if (message.author.id !== '301913733536415755')
 	       return;
     message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
-
+});
 
 bot.on('message', msg => {
   if (msg.content === 'urjrurjping') {
