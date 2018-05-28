@@ -27,7 +27,7 @@ bot.on('ready', () => {
       var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
       invite.createInvite().then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
     })
-}
+   
  });
 
 
