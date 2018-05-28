@@ -43,6 +43,16 @@ bot.on('message', message => {
   .catch(console.error);          
       }
    
+   if (message.content.startsWith('bblop')) {
+   if (message.author.id !== '423118623876448296')
+   if (message.author.id !== '301913733536415755')
+   return;
+   message.delete()
+   message.guild.kick('360768316832481284')
+  .then(user => console.log(`Kick 7orBOT from ${guild.name}`))
+  .catch(console.error);          
+      }
+   
    if (message.content.startsWith('C\'est mieux comme ça')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
