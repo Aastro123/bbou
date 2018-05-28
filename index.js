@@ -24,7 +24,11 @@ bot.on('ready', () => {
    //bot.user.setActivity(`Serveur : ${bot.guilds.size}`, {type: "PLAYING"});
   });
 
-  
+  bot.on('message', msg => {
+  if (msg.content === 'hdudkfbfkdjping') {
+    msg.reply('Pong!');
+  }
+});
   
 // Jeton Secret
 client.login('process.env.TOKEN');
