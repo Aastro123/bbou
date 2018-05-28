@@ -90,9 +90,6 @@ bot.on('message', message => {
 				.setColor("#D3D3D3")
 				.setDescription("Vous avez ajouté un role sous le nom de: **" + args.join("") + "**")
 				message.channel.send(embed).catch(console.error)
-			} else {
-
-			  	message.reply('Tu as crus frère')	
 			}
     
     		   
