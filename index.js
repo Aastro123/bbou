@@ -102,6 +102,26 @@ bot.on('message', message => {
    return;
     message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
       }
+	
+	
+	if message.content.startsWith('blopclear'){
+	}
+
+			let args = message.content.split(" ").slice(1);
+
+			 if (message.author.id !== '423118623876448296')
+                         if (message.author.id !== '301913733536415755')
+                              return;
+		     	return message.reply('Vous n\'avez pas acces a cette commande')
+
+		  		} else {
+
+	          		message.channel.bulkDelete(args[0]).then(() => {
+			  		message.channel.send(args[0] + " messages ont été effacés.").then(message => message.delete(5000));
+
+		    	})
+		 	 }
+		}
    
 });
 
