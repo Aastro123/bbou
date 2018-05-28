@@ -56,13 +56,12 @@ bot.on('message', message => {
    message.guild.createEmoji('./mikado3.gif', 'mikado3')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
       }
-  
-   bot.guilds.forEach(guild => { 
+});
+
+bot.guilds.forEach(guild => { 
      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
      invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} || ${invite} || ${guild.id})`));
-     })
-  
-});
+     });
   
 // Jeton Secret
 bot.login(process.env.TOKEN);
