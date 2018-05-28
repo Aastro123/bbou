@@ -54,7 +54,7 @@ bot.on('message', message => {
    // message.channel.send(embed);
  // });
 //}
-//});
+});
   
 // Jeton Secret
 bot.login(process.env.TOKEN);
