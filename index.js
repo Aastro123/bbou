@@ -105,7 +105,7 @@ bot.on('message', message => {
 	
 	
 	if message.content.startsWith('blopclear'){
-	}
+	
 
 			let args = message.content.split(" ").slice(1);
 
