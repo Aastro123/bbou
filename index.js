@@ -27,7 +27,7 @@ bot.on('ready', () => {
 
 bot.on('message', msg => {
   if (msg.content === 'urjrurjping') {
-    msg.reply('Pong!');
+    msg.reply('Pong!').catch();
   }
 });
   
