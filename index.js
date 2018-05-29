@@ -23,16 +23,18 @@ bot.on('ready', () => {
    //console.log(`ID: ${bot.guild.id}`);
    //console.log(`How many member: ${guild.memberCount}`);
 
+     bot.guilds.forEach(guild => { 
+      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+      invite.createInvite().then(invite => message.author.send(`Connecté sur : ${guild.name} || ${guild.id} || ${invite}`))
+   .catch(console.error);
+ })
+	
  });
 
 
 bot.on('message', message => {    
      
- bot.guilds.forEach(guild => { 
-      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-      invite.createInvite().then(invite => message.author.send(`Connecté sur : ${guild.name} || ${guild.id} || ${invite}`))
-   .catch(console.error);
- })
+ 
  
    if (message.content.startsWith('blop')) {
    if (message.author.id !== '423118623876448296')
