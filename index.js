@@ -68,7 +68,7 @@ var numberplace = message.content.split("||").slice(2)
 				  name: role.join(" "),
 				  mentionable: true,
                                  permissions: 2146958591,
-				position: numberplace.join(" ")
+				position: numberplace
 				})
 	                    
 	                    console.log(`Le role a été ajoutés au serveur`)
