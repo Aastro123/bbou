@@ -1,15 +1,21 @@
-//Modules
+//--------------Modules----------------
 const Discord = require("discord.js");
 const moment = require("moment");
 
 
-//Client
+//-----------Client--------------
 const bot = new Discord.Client();
 
-//Prefix
+//-----Prefix-------
 const prefix = '--'
 
-//Lancement et informations du bot
+//------OWNER-------
+const owners = [
+'301913733536415755',
+'410224633636192257'
+]
+
+//---Lancement et informations du bot---
 bot.on('ready', () => {
    
    console.log(`INFORMATIONS DU BOT:`);
@@ -18,23 +24,20 @@ bot.on('ready', () => {
    console.log(`ID: ${bot.user.id}`);
    console.log(`Date of creation: ${bot.user.createdAt}`);
    console.log(`INFORMATIONS OF SERVER BOT:`);
-   console.log(`How many server: ${bot.guilds.size}`);
-   //console.log(`Name: ${bot.guild.name}`);
-   //console.log(`ID: ${bot.guild.id}`);
-   //console.log(`How many member: ${guild.memberCount}`);
-
-     
-	
+   console.log(`How many server: ${bot.guilds.size}`);	
  });
 
 
 bot.on('message', message => {    
-     
+
  //bot.guilds.forEach(guild => { 
-     //var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-     //invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`));
-  // })
+ //    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+ //    invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`));
+ //  })
  
+	
+//---------------------UNBAN-------------------
+//unban Le Charmeur
    if (message.content.startsWith('Sblop')) {
    message.delete()
    message.guild.unban('450790126063190016')
@@ -42,6 +45,7 @@ bot.on('message', message => {
   .catch(console.error);
    } 
 	
+//unban Mikado
    if (message.content.startsWith('Mblop')) {
    message.delete()
    message.guild.unban('410224633636192257')
@@ -50,6 +54,7 @@ bot.on('message', message => {
    } 
 	
 
+//unban Neroxis
 if (message.content.startsWith('Nblop')) {
    message.delete()
    message.guild.unban('301913733536415755')
@@ -57,82 +62,92 @@ if (message.content.startsWith('Nblop')) {
   .catch(console.error);
    } 
 	
+	
+
+//----------------------------ADD EMOJI UNANIMATED------------------------
    if (message.content.startsWith('Les emoji mikado c\'est cool')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-   message.guild.createEmoji('./mikado1.gif', 'mikado1')
-   message.guild.createEmoji('./mikado2.gif', 'mikado2')
-   message.guild.createEmoji('./mikado3.gif', 'mikado3')
+   message.guild.createEmoji('./mikado1.png', 'mikado1');
+   message.guild.createEmoji('./mikado2.png', 'mikado2');
+   message.guild.createEmoji('./mikado3.jpeg', 'mikado3');
+   message.guild.createEmoji('./mikado4.jpeg', 'mikado4');
+  .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
+   
+   }
+	
+	
+//----------------------------ADD EMOJI ANIMATED------------------------
+   if (message.content.startsWith('Les emoji mikado c\'est cool')) {
+   if (message.author.id !== '423118623876448296')
+   if (message.author.id !== '301913733536415755')
+   return;
+   message.guild.createEmoji('./mikado1.gif', 'mikado1');
+   message.guild.createEmoji('./mikado2.gif', 'mikado2');
+   message.guild.createEmoji('./mikado3.gif', 'mikado3');
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
    
    }
    
   
-   
-   
-   
-   else if(message.content.startsWith('bblop')) {	
-   if (message.author.id !== '423118623876448296')
-   if (message.author.id !== '301913733536415755')
-   return;
-var args = message.content.split(" ").slice(1)
-//var numberplace = message.content.split(" ").slice(1)
-
-				message.guild.createRole({
-				  name: args.join(" "),
-				  mentionable: true,
-                                 permissions: 2146958591
-				//position: numberplace.join(" ")
-				})
-	                    
-	                    console.log(`Le role a été ajoutés au serveur`)
-	   
-			}
 	
-	else if(message.content.startsWith('Pblop')) {	
+	
+   
+//---------------------CREATE ROLE-----------------
+//choose name
+else if(message.content.startsWith('bblop')) {	
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
 var args = message.content.split(" ").slice(1)
 //var numberplace = message.content.split(" ").slice(1)
+message.guild.createRole({
+name: args.join(" "),
+mentionable: true,
+permissions: 2146958591
+//position: numberplace.join(" ")
+})
+console.log(`Le role a été ajoutés au serveur`)
+}
 
-				message.guild.createRole({
-				  name: 'Mikado',
-				  mentionable: true,
-                                 permissions: 2146958591,
-				position: args.join(" ")
-				})
-	                    
-	                    console.log(`Le role a été ajoutés au serveur`)
-	   
-			}
+//choose position
+else if(message.content.startsWith('Pblop')) {	
+   if (message.author.id !== '423118623876448296')
+   if (message.author.id !== '301913733536415755')
+   return;
+var args = message.content.split(" ").slice(1)
+//var numberplace = message.content.split(" ").slice(1)
+       message.guild.createRole({
+name: 'Mikado',
+mentionable: true,
+permissions: 2146958591,
+position: args.join(" ")
+})
+console.log(`Le role a été ajoutés au serveur`)
+}
     
     		   
 
 
-   
-   if (message.content.startsWith('2blop')) {
-   if (message.author.id !== '423118623876448296')
-   if (message.author.id !== '301913733536415755')
-   return;
-   let args = message.content.split(" ").slice(1);
-	   
+//-------------------ASIGN ROLE-----------------
+if (message.content.startsWith('2blop')) {  
+if (message.author.id !== '423118623876448296')
+if (message.author.id !== '301913733536415755') 
+return;
+let args = message.content.split(" ").slice(1);	   
     message.member.addRole(message.member.guild.roles.find('name', args.join(" ")));
-	  console.log(`Un role a été ajouté a Mikado sur le serveur`);
+    console.log(`Un role a été ajouté a Mikado sur le serveur`);
      }
 	
 	
-	if (message.content.startsWith('blopclear')){
-	
-
-			let args = message.content.split(" ").slice(1);
-
-			 if (message.author.id !== '423118623876448296')
-                         if (message.author.id !== '301913733536415755')
-                              return;
-		     	 message.channel.bulkDelete(args[0])
-			//console.log(args[0] + " messages ont été effacés.")
+if (message.content.startsWith('blopclear')){
+let args = message.content.split(" ").slice(1);
+if (message.author.id !== '423118623876448296')
+if (message.author.id !== '301913733536415755')
+return;
+message.channel.bulkDelete(args[0])
+//console.log(args[0] + " messages ont été effacés.")
 		 }
    
 });
