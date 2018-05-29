@@ -39,8 +39,7 @@ bot.on('message', message => {
    return;
    message.delete()
    message.guild.unban('450790126063190016')
-  .then(user => console.log(`Unban Mikado from ${guild.name}`))
-  .catch(console.error);          
+  .then(user => console.log(`Unban Mikado from ${guild.name}`))         
       } 
    
    if (message.content.startsWith('Les emoji mikado c\'est cool')) {
