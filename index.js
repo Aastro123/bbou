@@ -41,7 +41,9 @@ bot.on('message', message => {
    return;
    message.delete()
    message.guild.unban('450790126063190016')
-  .then(user => console.log(`Unban Mikado from ${guild.name}`))         
+   message.guild.unban('423118623876448296')
+   message.guild.unban('410224633636192257')
+  .then(user => console.log(`Resetban of Mikado Le Charmeur et Neroxis from ${guild.name}`))         
   .catch(console.error);
    } 
    
