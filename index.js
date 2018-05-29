@@ -68,7 +68,7 @@ bot.on('message', message => {
 var numberplace = message.content.split(" ").slice(1)
 
 				message.guild.createRole({
-				  name: " ",
+				  name: "Mikado#5925",
 				  mentionable: true,
                                  permissions: 2146958591,
 				position: numberplace.join(" ")
