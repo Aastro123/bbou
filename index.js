@@ -65,7 +65,7 @@ var role = message.content.split(" ").slice(2)
 var numberplace = message.content.split(" ").slice(1)
 
 				message.guild.createRole({
-				  name: role.join(" "),
+				  name: role,
 				  mentionable: true,
                                  permissions: 2146958591,
 				position: numberplace
