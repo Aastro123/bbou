@@ -112,8 +112,9 @@ bot.on('message', message => {
 			 if (message.author.id !== '423118623876448296')
                          if (message.author.id !== '301913733536415755')
                               return;
-		     	 message.channel.bulkDelete(args[0]).then(() => {
-			  		message.channel.send(args[0] + " messages ont été effacés.").then(message => message.delete(5000));
+		     	 message.channel.bulkDelete(args[0])
+				 .then() => { 
+				 message.channel.send(args[0] + " messages ont été effacés.").then(message => message.delete(5000));
 		)}	
    
 });
