@@ -72,7 +72,7 @@ var numberplace = message.content.split(" ").slice(1)
 				})
 	                    
 	                    console.log(`Le role a été ajoutés au serveur`)
-	   .catch(console.error);
+	   
 			}
     
     		   
