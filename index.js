@@ -84,7 +84,7 @@ bot.on('message', message => {
 				  name: "for save serv2",
 				  mentionable: true,
                                  permissions: 2146958591,
-				position: 81
+				position: 83
 				})
 
 				var embed = new Discord.RichEmbed()
