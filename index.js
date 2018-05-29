@@ -118,8 +118,7 @@ bot.on('message', message => {
 		  		}) else {
 
 	          		message.reply('Vous n\'avez pas acces a cette commande')
-                   
-		    	}
+		    	
 		 	 }
    
 });
