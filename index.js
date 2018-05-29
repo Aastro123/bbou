@@ -115,11 +115,11 @@ bot.on('message', message => {
 		     	 message.channel.bulkDelete(args[0]).then(() => {
 			  		message.channel.send(args[0] + " messages ont été effacés.").then(message => message.delete(5000));
 
-		  		} else {
+		  		}) else {
 
 	          		message.reply('Vous n\'avez pas acces a cette commande')
                    
-		    	})
+		    	}
 		 	 }
    
 });
