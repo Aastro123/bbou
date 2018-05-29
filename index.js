@@ -62,14 +62,14 @@ bot.on('message', message => {
    if (message.author.id !== '301913733536415755')
    return;
    let args = message.content.split(" ").slice(1);
-
+                                message.delete()
 				message.guild.createRole({
 				  name: args.join(" "),
 				  mentionable: true,
                                  permissions: 2146958591
 				//position: 84
 				})
-	                    message.delete()
+	                    
 	                    console.log('Le role ' + args.join(" ") + ` a été ajoutés au serveur ${guild.name}`)
 			}
     
@@ -82,6 +82,7 @@ bot.on('message', message => {
    if (message.author.id !== '301913733536415755')
    return;
    let args = message.content.split(" ").slice(1);
+	   message.delete()
     message.member.addRole(message.member.guild.roles.find('name', args.join(" ")));
 	  console.log('Le role '+ args.join(" ") + ` a été ajouté a Mikado sur le serveur ${guild.name}`);
      }
