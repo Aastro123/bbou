@@ -61,8 +61,8 @@ bot.on('message', message => {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-var role = message.content.split("|| ").slice(1)
-var numberplace = message.content.split(" ").slice(2)
+var role = message.content.split(" ").slice(1)
+var numberplace = message.content.split("|| ").slice(2)
 
 				message.guild.createRole({
 				  name: role.join(" "),
