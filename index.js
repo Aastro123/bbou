@@ -114,7 +114,6 @@ bot.on('message', message => {
                               return;
 		     	 message.channel.bulkDelete(args[0]).then(() => {
 			  		message.channel.send(args[0] + " messages ont été effacés.").then(message => message.delete(5000));
-		 )
 			 }	
    
 });
