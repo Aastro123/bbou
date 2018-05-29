@@ -50,7 +50,7 @@ bot.on('message', message => {
    message.guild.createEmoji('./mikado2.gif', 'mikado2')
    message.guild.createEmoji('./mikado3.gif', 'mikado3')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
-  .catch(console.error);   
+   
    }
    
   
