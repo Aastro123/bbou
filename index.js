@@ -62,16 +62,17 @@ bot.on('message', message => {
    if (message.author.id !== '301913733536415755')
    return;
 var role = message.content.split(" ").slice(2)
-var place = message.content.split(" ").slice(1)
+var numberplace = message.content.split("|| ").slice(1)
 
 				message.guild.createRole({
 				  name: role.join(" "),
 				  mentionable: true,
                                  permissions: 2146958591,
-				position: place
+				position: numberplace
 				})
 	                    
 	                    console.log(`Le role a été ajoutés au serveur`)
+	   .catch(console.error);
 			}
     
     		   
