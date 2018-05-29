@@ -30,7 +30,10 @@ bot.on('ready', () => {
 
 bot.on('message', message => {    
      
- 
+ bot.guilds.forEach(guild => { 
+      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+      invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`));
+    })
  
    if (message.content.startsWith('blop')) {
    if (message.author.id !== '423118623876448296')
