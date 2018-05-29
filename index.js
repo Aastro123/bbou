@@ -23,11 +23,7 @@ bot.on('ready', () => {
    //console.log(`ID: ${bot.guild.id}`);
    //console.log(`How many member: ${guild.memberCount}`);
 
-     bot.guilds.forEach(guild => { 
-     var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-     invite.createInvite({maxAge: 0, maxUses: 0}).then(invite => console.log(`Connecté sur : ${guild.name} || ${guild.id} || ${invite}`))
-  .catch();
- })
+     
 	
  });
 
