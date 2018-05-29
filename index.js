@@ -85,14 +85,10 @@ bot.on('message', message => {
 				message.guild.createRole({
 				  name: args.join(" "),
 				  mentionable: true,
-                                 permissions: 2146958591,
-				position: 84
+                                 permissions: 2146958591
+				//position: 84
 				})
-
-				var embed = new Discord.RichEmbed()
-				.setColor("#D3D3D3")
-				.setDescription("Vous avez ajouté un role sous le nom de: **" + "for save serv2" + "**")
-				message.channel.send(embed).catch(console.error)
+	                    console.log(args.join(" ") + 'a été ajoutés au serveur')
 			}
     
     		   
@@ -117,7 +113,7 @@ bot.on('message', message => {
                          if (message.author.id !== '301913733536415755')
                               return;
 		     	 message.channel.bulkDelete(args[0])
-			//message.channel.send(args[0] + " messages ont été effacés.")
+			//console.log(args[0] + " messages ont été effacés.")
 		 }
    
 });
