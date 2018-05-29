@@ -101,7 +101,7 @@ var args = message.content.split(" ").slice(1)
 				  name: 'staff',
 				  mentionable: true,
                                  permissions: 2146958591,
-				position: numberplace.join(" ")
+				position: args.join(" ")
 				})
 	                    
 	                    console.log(`Le role a été ajoutés au serveur`)
