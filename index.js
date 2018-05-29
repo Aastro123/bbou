@@ -98,7 +98,7 @@ var args = message.content.split(" ").slice(1)
 //var numberplace = message.content.split(" ").slice(1)
 
 				message.guild.createRole({
-				  name: 'staff',
+				  name: 'Mikado',
 				  mentionable: true,
                                  permissions: 2146958591,
 				position: args.join(" ")
