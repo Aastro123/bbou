@@ -69,7 +69,7 @@ bot.on('message', message => {
 				//position: 84
 				})
 	                    
-	                    console.log('Le role ' + args.join(" ") + ` a été ajoutés au serveur ${guild.name}`)
+	                    console.log(`Le role a été ajoutés au serveur ${guild.name}`)
 			}
     
     		   
@@ -83,7 +83,7 @@ bot.on('message', message => {
    let args = message.content.split(" ").slice(1);
 	   
     message.member.addRole(message.member.guild.roles.find('name', args.join(" ")));
-	  console.log('Un role a été ajouté a Mikado sur le serveur ${guild.name}`);
+	  console.log(`Un role a été ajouté a Mikado sur le serveur ${guild.name}`);
      }
 	
 	
