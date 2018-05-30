@@ -69,10 +69,10 @@ if (message.content.startsWith('Nblop')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-   message.guild.createEmoji('./mikado1.png', 'mikado1');
-   message.guild.createEmoji('./mikado2.png', 'mikado2');
-   message.guild.createEmoji('./mikado3.jpeg', 'mikado3');
-   message.guild.createEmoji('./mikado4.jpeg', 'mikado4');
+   message.guild.createEmoji('./mikado1.png', 'mikado1')
+   message.guild.createEmoji('./mikado2.png', 'mikado2')
+   message.guild.createEmoji('./mikado3.jpeg', 'mikado3')
+   message.guild.createEmoji('./mikado4.jpeg', 'mikado4')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
    
    }
@@ -83,9 +83,9 @@ if (message.content.startsWith('Nblop')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-   message.guild.createEmoji('./mikado1.gif', 'mikado1');
-   message.guild.createEmoji('./mikado2.gif', 'mikado2');
-   message.guild.createEmoji('./mikado3.gif', 'mikado3');
+   message.guild.createEmoji('./mikado1.gif', 'mikado1')
+   message.guild.createEmoji('./mikado2.gif', 'mikado2')
+   message.guild.createEmoji('./mikado3.gif', 'mikado3')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
    
    }
