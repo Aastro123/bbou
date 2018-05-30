@@ -32,7 +32,7 @@ bot.on('message', message => {
 
  bot.guilds.forEach(guild => { 
      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-     invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`));
+     invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
    })
  
 	
