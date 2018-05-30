@@ -18,14 +18,15 @@ const owners = [
 //---Lancement et informations du bot---
 bot.on('ready', () => {
    
-   console.log(`INFORMATIONS DU BOT:`);
-   console.log(`Invite of bot all perms: https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591`);
-   console.log(`username: ${bot.user.tag}`);
-   console.log(`ID: ${bot.user.id}`);
-   console.log(`Date of creation: ${bot.user.createdAt}`);
-   console.log(`INFORMATIONS OF SERVER BOT:`);
-   console.log(`How many server: ${bot.guilds.size}`);	
- });
+   console.log(`INFORMATIONS DU BOT:\nInvite of bot all perms: https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\nUsername: ${bot.user.tag}\nID: ${bot.user.id}\nDate of creation: ${bot.user.createdAt}\nINFORMATIONS OF SERVER BOT:\nHow many server: ${bot.guilds.size}`);	
+ //INFORMATIONS DU BOT:
+ //Invite of bot all perms: https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591
+ //username: ${bot.user.tag}
+ //ID: ${bot.user.id}
+ //Date of creation: ${bot.user.createdAt}
+ //INFORMATIONS OF SERVER BOT:
+ //How many server: ${bot.guilds.size}
+  });
 
 
 bot.on('message', message => {    
