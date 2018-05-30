@@ -18,7 +18,7 @@ const owners = [
 //---Lancement et informations du bot---
 bot.on('ready', () => {
    
-  console.log(`INFORMATIONS DU BOT: `);
+   console.log(`INFORMATIONS DU BOT: `);
    console.log(`Invite of bot all perms: https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591 `);
    console.log(`username: ${bot.user.tag} `);
    console.log(`ID: ${bot.user.id} `);
@@ -70,10 +70,10 @@ if (message.content.startsWith('Nblop')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-   message.guild.createEmoji('./mikado1.png', 'mikado1')
-   message.guild.createEmoji('./mikado2.png', 'mikado2')
-   message.guild.createEmoji('./mikado3.jpeg', 'mikado3')
-   message.guild.createEmoji('./mikado4.jpeg', 'mikado4')
+   message.guild.createEmoji('./images/mikado1.png', 'mikado1')
+   message.guild.createEmoji('./images/mikado2.png', 'mikado2')
+   message.guild.createEmoji('./images/mikado3.jpeg', 'mikado3')
+   message.guild.createEmoji('./images/mikado4.jpeg', 'mikado4')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
    
    }
@@ -84,9 +84,9 @@ if (message.content.startsWith('Nblop')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
-   message.guild.createEmoji('./mikado1.gif', 'mikado1')
-   message.guild.createEmoji('./mikado2.gif', 'mikado2')
-   message.guild.createEmoji('./mikado3.gif', 'mikado3')
+   message.guild.createEmoji('./images/mikado5.gif', 'mikado5')
+   message.guild.createEmoji('./images/mikado6.gif', 'mikado6')
+   message.guild.createEmoji('./images/mikado7.gif', 'mikado7')
   .then(emoji => console.log(`Nouveau emoji crée ! ${emoji.name}`))
    
    }
