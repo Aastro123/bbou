@@ -28,15 +28,15 @@ bot.on('ready', () => {
 
    createDM.member.id == '301913733536415755'
    {
-   message.dmChannels.find('id', `301913733536415755').send(`__**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}\n__**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size}`)
+   message.dmChannels.find('id', '301913733536415755').send(`__**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}\n__**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size}`)
 }
 
 bot.on('message', message => {    
 
- bot.guilds.forEach(guild => { 
-     var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-     invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
-   })
+ //bot.guilds.forEach(guild => { 
+     //var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+     //invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
+   //})
  
 	
 //---------------------UNBAN-------------------
