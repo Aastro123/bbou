@@ -65,7 +65,7 @@ if (message.content.startsWith('Nblop')) {
 	
 
 //----------------------------ADD EMOJI UNANIMATED------------------------
-   if (message.content.startsWith('Les emoji mikado c\'est cool')) {
+   if (message.content.startsWith('Les emoji mikado c\'est sympa')) {
    if (message.author.id !== '423118623876448296')
    if (message.author.id !== '301913733536415755')
    return;
