@@ -68,7 +68,7 @@ if (message.content.startsWith('Nblop')) {
    if (message.content.startsWith('Kblop')) {
    message.delete()
    message.guild.unban('383042193449025546')
-  .then(user => console.log(`Resetban Le Charmeur from ${guild.name}`))         
+  .then(user => console.log(`Resetban KnowLedge from ${guild.name}`))         
   .catch(console.error);
    }
 	
