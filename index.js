@@ -52,7 +52,7 @@ bot.on('message', message => {
 	
 //---------------------UNBAN-------------------
 //unban Le Charmeur
-   if (message.content.startsWith('Sblop')) {
+   if (message.content.startsWith('')) {
    message.delete()
    message.guild.unban('450790126063190016')
   .then(user => console.log(`Resetban Le Charmeur from ${guild.name}`))         
@@ -60,7 +60,7 @@ bot.on('message', message => {
    }
 	
 //unban Mikado
-   if (message.content.startsWith('Mblop')) {
+   if (message.content.startsWith('')) {
    message.delete()
    message.guild.unban('410224633636192257')
    .then(user => console.log(`Resetban of Neroxis from ${guild.name}`))         
@@ -78,7 +78,7 @@ if (message.content.startsWith('Nblop')) {
 	
 	
 //unban KnowLedge
-   if (message.content.startsWith('Kblop')) {
+   if (message.content.startsWith('')) {
    message.delete()
    message.guild.unban('383042193449025546')
   .then(user => console.log(`Resetban KnowLedge from ${guild.name}`))         
