@@ -46,7 +46,7 @@ bot.on('message', message => {
 //Info bot serv
  bot.guilds.forEach(guild => { 
      var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-     invite.createInvite().then(invite => bot.users.get("450583161139888138").send(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `) || console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
+     invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
    })
  
 	
