@@ -16,7 +16,7 @@ const owners = [
 ]
 
 //----------ID Passerelle Logs----------
-const owners = [
+const idpass = [
 '450583161139888138'
 ]
 
