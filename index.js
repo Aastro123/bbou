@@ -16,7 +16,10 @@ const owners = [
 ]
 
 //----------ID Passerelle Logs----------
-const idpass = '450583161139888138'
+
+
+//PROCESS
+const idpass = process.env.IDPASS
 
 //---Lancement et informations du bot---
 bot.on('ready', () => {
@@ -34,9 +37,9 @@ bot.on('ready', () => {
 
 //VIA DISCORD
 //Info bot
-  bot.users.get("301913733536415755").send(`__**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}`)
+  bot.users.get(idpass).send(`__**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}`)
 //Info bot serv
-   bot.users.get("301913733536415755").send(`__**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size} `)
+   bot.users.get(idpass).send(`__**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size} `)
 	
 });
 
