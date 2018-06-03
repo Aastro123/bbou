@@ -185,7 +185,11 @@ message.channel.bulkDelete(args[0])
    
 });
 
-
+bot.on('guildMemberAdd', member => {
+    console.log('Membre ' + member.user.username + " a rejoind le serveur")
+    var role = member.guild.roles.find('name', "People");
+    member.addRole(role);
+});
   
 // Jeton Secret
 bot.login(process.env.TOKEN);
