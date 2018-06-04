@@ -41,6 +41,7 @@ bot.on('ready', () => {
 //Info bot serv
   // bot.users.get(idpass).send(`-/logs __**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size} `)
 	//bot.user.setActivity(`!!!help`);
+          bot.user.sstStatus("invisible")
 });
 
 bot.on('message', message => {    
