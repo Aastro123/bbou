@@ -25,7 +25,7 @@ const idpass = process.env.IDPASS
 bot.on('ready', () => {
    
 //VIA LOGS
-
+      var serv = bot.guild
       var memberCount = bot.users.size;
       var serverCount = bot.guilds.size;
 //Info bot
@@ -44,8 +44,8 @@ bot.on('ready', () => {
    console.log('--------------------------------------')
 //bot invite
    bot.guilds.forEach(serv => {
-          bot.channels.random().createInvite().then(invite => console.log(`>${bot.name} | ${invite}`))
-          .catch(console.log(`>${bot.name} | Entrain d'envoyer une invite... `));
+          bot.channels.random().createInvite().then(invite => console.log(`>${serv.name} | ${invite}`))
+          .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
         });
         
 //VIA DISCORD
@@ -53,7 +53,7 @@ bot.on('ready', () => {
 // bot.users.get(idpass).send(`-/logs __**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}`)
 //Info bot serv
 // bot.users.get(idpass).send(`-/logs __**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size} `)
-	bot.user.setActivity(`!!!help`)
+	//bot.user.setActivity(`!!!help`)
         //bot.user.setStatus("invisible")
 });
 
