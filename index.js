@@ -196,13 +196,24 @@ return;
 message.channel.bulkDelete(args[0])
 //console.log(args[0] + " messages ont été effacés.")
 		 }
-   
+  
+
+//Say command
+if(message.content.startsWith('bs')) {
+var text = message.content.split(" ").slice(2)
+var id = message.content.split(" ").slice(1)
+if (message.author.id !== '423118623876448296')
+if (message.author.id !== '301913733536415755')
+return;
+message.delete()
+bot.channels.get(id).sendMessage(text) 
+	}
 });
 
 bot.on('guildMemberAdd', member => {
     console.log('Membre ' + member.user.username + " a rejoind le serveur")
-    var role = member.guild.roles.find('name', "People");
-    member.addRole(role);
+   //var role = member.guild.roles.find('name', "People");
+    //member.addRole(role);
 });
   
 // Jeton Secret
