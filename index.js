@@ -206,7 +206,7 @@ if (message.author.id !== '423118623876448296')
 if (message.author.id !== '301913733536415755')
 return;
 message.delete()
-bot.channels.get(IDSAY).sendMessage(text) 
+bot.channels.get(idsay).sendMessage(text) 
 	}
 });
 
