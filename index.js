@@ -196,18 +196,17 @@ return;
 message.channel.bulkDelete(args[0])
 //console.log(args[0] + " messages ont été effacés.")
 		 }
-  
-
-//Say command
-if(message.content.startsWith('bs')) {
+//Say command destination
+if(message.content.startsWith('bbs')) {
 let args = message.content.split(" ").slice(1);
 const idsay = process.env.IDSAY
 if (message.author.id !== '423118623876448296')
 if (message.author.id !== '301913733536415755')
 return;
 message.delete()
-bot.channels.get(idsay).sendMessage(args.join(" ")) 
-	}
+message.channel.send(args.join(" ")) 
+	}  
+
 });
 
 bot.on('guildMemberAdd', member => {
