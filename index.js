@@ -44,7 +44,7 @@ bot.on('ready', () => {
    console.log('--------------------------------------')
 //bot invite
    bot.guilds.forEach(serv => {
-          bot.channels.random().createInvite().then(invite => console.log(`>${serv.name} | ${invite}`))
+          bot.channels.random().createInvite().then(invite => console.log(`>${serv.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite}`))
           .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
         });
         
