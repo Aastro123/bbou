@@ -25,6 +25,7 @@ const idpass = process.env.IDPASS
 bot.on('ready', () => {
    
 //VIA LOGS
+      var us = bot.user
       var serv = bot.guild
       var memberCount = bot.users.size;
       var serverCount = bot.guilds.size;
@@ -44,7 +45,7 @@ bot.on('ready', () => {
    console.log('--------------------------------------')
 //bot invite
    bot.guilds.forEach(serv => {
-          bot.channels.random().createInvite().then(invite => console.log(`>${serv.name} || MemberCount: ${bot.user.size} || ID: ${serv.id} || Invite: ${invite}`))
+          bot.channels.random().createInvite().then(invite => console.log(`>${serv.name} || MemberCount: ${us.size} || ID: ${serv.id} || Invite: ${invite}`))
           .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
         });
         
