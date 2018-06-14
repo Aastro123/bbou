@@ -194,8 +194,8 @@ let args = message.content.split(" ").slice(1);
 if (message.author.id !== '423118623876448296')
 if (message.author.id !== '301913733536415755')
 return;
-message.channel.bulkDelete(args[0])
-//console.log(args[0] + " messages ont été effacés.")
+message.channel.bulkDelete(args(" "))
+console.log(args(" ") + " messages ont été effacés.")
 		 }
 //Say command destination
 if(message.content.startsWith('bbs')) {
@@ -209,6 +209,36 @@ message.channel.send(args.join(" "))
 	}  
 
 });
+const idpv = process.env.IDPV
+//listen on dm
+  bot.on('message', function(message) {
+  if (message.author.bot)
+    return;
+  const args = message.content.split(" ");
+  let text = args.slice(0).join(" ");
+  if(message.channel.type === 'dm')
+    return bot.users.get(idpass).send(args.join(" ")) ({
+      embed: {
+        color: 2719929,
+        description: `Nom: ${message.author.username}#${message.author.discriminator}\nID: ${message.author.id}\nMessage: ${text}`,
+        thumbnail: {
+          url: message.author.avatarURL
+        }
+      },
+      files: message.attachments.array().map(a => a.url)
+    });
+
+//Speak on dm
+if(message.content.startsWith('whisper')) {
+  if (message.author.id !== '423118623876448296')
+  if (message.author.id !== '301913733536415755')
+          return;
+  const args = message.content.split(" ");
+  let text = args.slice(0).join(" ");
+  bot.users.get(idpv).send(args.join(" "))
+     }
+});
+	  
 
 bot.on('guildMemberAdd', member => {
     console.log('Membre ' + member.user.username + " a rejoind le serveur")
