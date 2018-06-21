@@ -40,10 +40,10 @@ bot.on('ready', () => {
   // console.log("Total Users: " + memberCount + "\nTotal Servers: " + serverCount);
    console.log('--------------------------------------')
 //bot invite
-   bot.guilds.forEach(serv => {
-          bot.channels.random().createInvite().then(invite => console.log(`>${bot.guild.name} || ${bot.guild.id} || Invite: ${invite}`))
-          .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
-        });
+  // bot.guilds.forEach(serv => {
+         // bot.channels.random().createInvite().then(invite => console.log(`>${bot.guild.name} || ${bot.guild.id} || Invite: ${invite}`))
+          //.catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
+       // });
         
 //VIA DISCORD
 //Info bot
