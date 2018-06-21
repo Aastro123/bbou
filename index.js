@@ -204,7 +204,7 @@ message.delete()
 bot.channels.get(process.env.IDSAY).send(args.join(" ")) 
 	}  
 	
-if(message.content === 'leaveman') {
+if(message.content.startsWith('leaveman')) {
 guild.leave()
   .then(g => console.log(`Left the guild ${g}`))
   .catch(console.error)
