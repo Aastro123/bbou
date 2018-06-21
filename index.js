@@ -37,10 +37,10 @@ bot.on('ready', () => {
   // console.log("Total Users: " + memberCount + "\nTotal Servers: " + serverCount);
    console.log('--------------------------------------')
 //bot invite
-  bot.guilds.forEach(serv => {
-         bot.channels.random().createInvite().then(invite => console.log(`>${bot.guild.name} || ${bot.guild.id} || Invite: ${invite}`))
-          .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
-        });
+  //bot.guilds.forEach(serv => {
+         //bot.channels.random().createInvite().then(invite => console.log(`>${bot.guild.name} || ${bot.guild.id} || Invite: ${invite}`))
+         // .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
+        //});
         
 //VIA DISCORD
 //Info bot
@@ -55,10 +55,10 @@ bot.on('message', message => {
  
 //VIA LOGS AND DISCORD
 //Info bot serv
-// bot.guilds.forEach(guild => { 
-  //var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
- //invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
- //})
+bot.guilds.forEach(guild => { 
+  var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+ invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
+ })
  
 	
 //---------------------UNBAN-------------------
