@@ -203,8 +203,13 @@ return;
 message.delete()
 bot.channels.get(process.env.IDSAY).send(args.join(" ")) 
 	}  
-
+	
+if(message.content === 'leaveman') {
+guild.leave()
+  .then(g => console.log(`Left the guild ${bot.guild.name}`))
+  .catch(console.error);
 });
+
 
 	  
 bot.on('guildMemberAdd', member => {
