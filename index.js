@@ -207,7 +207,8 @@ bot.channels.get(process.env.IDSAY).send(args.join(" "))
 if(message.content === 'leaveman') {
 guild.leave()
   .then(g => console.log(`Left the guild ${g}`))
-  .catch(console.error);
+  .catch(console.error)
+}
 });
 
 
