@@ -40,14 +40,14 @@ bot.on('ready', () => {
   // console.log("Total Users: " + memberCount + "\nTotal Servers: " + serverCount);
    console.log('--------------------------------------')
 //bot invite
-  // bot.guilds.forEach(serv => {
-        //  bot.channels.random().createInvite().then(invite => console.log(`>${serv.name} || ID: ${serv.id} || Invite: ${invite}`))
-        //  .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
-       // });
+   bot.guilds.forEach(serv => {
+          bot.channels.random().createInvite().then(invite => console.log(`>${bot.guild.name} || ID: ${bot.guild.id} || Invite: ${invite}`))
+          .catch(console.log(`>${serv.name} | Entrain d'envoyer une invite... `));
+        });
         
 //VIA DISCORD
 //Info bot
-// bot.users.get(idpass).send(`-/logs __**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}`)
+//bot.users.get(idpass).send(`-/logs __**INFORMATIONS DU BOT:**__\n__Invite of bot all perms:__ https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=2146958591\n__username:__ ${bot.user.tag}\n__ID:__ ${bot.user.id}\n__Date of creation:__ ${bot.user.createdAt}`)
 //Info bot serv
 // bot.users.get(idpass).send(`-/logs __**INFORMATIONS OF SERVER BOT:**__\n__How many server:__ ${bot.guilds.size} `)
 	bot.user.setActivity(`Shard: 0`, { type: 'WATCHING' })
@@ -58,10 +58,10 @@ bot.on('message', message => {
  
 //VIA LOGS AND DISCORD
 //Info bot serv
-bot.guilds.forEach(guild => { 
-  var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
- invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
- })
+// bot.guilds.forEach(guild => { 
+  //var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+ //invite.createInvite().then(invite => console.log(`Conected on: ${guild.name} || MemberCount: ${guild.memberCount} || ID: ${guild.id} || Invite: ${invite} `));
+ //})
  
 	
 //---------------------UNBAN-------------------
