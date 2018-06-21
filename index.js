@@ -203,24 +203,6 @@ message.channel.send(args.join(" "))
 	}  
 
 });
-const idpv = process.env.IDPV
-//listen on dm
-  bot.on('message', function(message) {
-  if (message.author.bot)
-    return;
-  const args = message.content.split(" ");
-  let text = args.slice(0).join(" ");
-  if(message.channel.type === 'dm')
-    return bot.users.get(idpv).send(args.join(" ")) ({
-      embed: {
-        color: 2719929,
-        description: `Nom: ${message.author.username}#${message.author.discriminator}\nID: ${message.author.id}\nMessage: ${text}`,
-        thumbnail: {
-          url: message.author.avatarURL
-        }
-      },
-      files: message.attachments.array().map(a => a.url)
-    });
 
 	  
 bot.on('guildMemberAdd', member => {
