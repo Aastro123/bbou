@@ -239,7 +239,6 @@ if(message.content.startsWith('whisper')) {
      }
 });
 	  
-
 bot.on('guildMemberAdd', member => {
     console.log('Membre ' + member.user.username + " a rejoind le serveur")
    //var role = member.guild.roles.find('name', "People");
