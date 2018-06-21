@@ -20,7 +20,7 @@ const owners = [
 
 //PROCESS
 const idpass = process.env.IDPASS
-const unban = 'Mblop'
+const unban = ''
 //---Lancement et informations du bot---
 bot.on('ready', () => {
    
