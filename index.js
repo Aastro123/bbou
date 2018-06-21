@@ -194,7 +194,7 @@ console.log(args(" ") + " messages ont été effacés.")
 
 	
 //Say command destination
-if(message.content.startsWith('bbs')) {
+if(message.content.startsWith('bsay')) {
 let args = message.content.split(" ").slice(1);
 const idsay = process.env.IDSAY
 if (message.author.id !== '423118623876448296')
