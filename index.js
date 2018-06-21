@@ -25,10 +25,6 @@ const idpass = process.env.IDPASS
 bot.on('ready', () => {
    
 //VIA LOGS
-      var us = bot.user
-      var serv = bot.guild
-      var memberCount = bot.users.size;
-      var serverCount = bot.guilds.size;
 //Info bot
    console.log('--------------------------------------')
    console.log(`INFORMATIONS DU BOT: `);
