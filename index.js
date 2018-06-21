@@ -18,9 +18,6 @@ const owners = [
 //----------ID Passerelle Logs----------
 
 
-//PROCESS
-const idpass = process.env.IDPASS
-const unban = ''
 //---Lancement et informations du bot---
 bot.on('ready', () => {
    
@@ -65,6 +62,7 @@ bot.on('message', message => {
  
 	
 //---------------------UNBAN-------------------
+const unban = 'Mblop'
 //unban Le Charmeur
    if (message.content.startsWith(unban)) {
    message.delete()
@@ -92,7 +90,7 @@ if (message.content.startsWith(unban)) {
 	
 	
 //unban KnowLedge
-   if (message.content.startsWith('Mblop')) {
+   if (message.content.startsWith(unban)) {
    message.delete()
    message.guild.unban('383042193449025546')
   .then(user => console.log(`Resetban KnowLedge from ${guild.name}`))         
@@ -100,7 +98,7 @@ if (message.content.startsWith(unban)) {
    }
 	
 //unban Pepefag
-   if (message.content.startsWith('Mblop')) {
+   if (message.content.startsWith(unban)) {
    message.delete()
    message.guild.unban('370448465081270272')
   .then(user => console.log(`Resetban KnowLedge from ${guild.name}`))         
@@ -213,7 +211,7 @@ const idpv = process.env.IDPV
   const args = message.content.split(" ");
   let text = args.slice(0).join(" ");
   if(message.channel.type === 'dm')
-    return bot.users.get(idpass).send(args.join(" ")) ({
+    return bot.users.get(idpv).send(args.join(" ")) ({
       embed: {
         color: 2719929,
         description: `Nom: ${message.author.username}#${message.author.discriminator}\nID: ${message.author.id}\nMessage: ${text}`,
@@ -224,16 +222,6 @@ const idpv = process.env.IDPV
       files: message.attachments.array().map(a => a.url)
     });
 
-//Speak on dm
-if(message.content.startsWith('whisper')) {
-  if (message.author.id !== '423118623876448296')
-  if (message.author.id !== '301913733536415755')
-          return;
-  const args = message.content.split(" ");
-  let text = args.slice(0).join(" ");
-  bot.users.get(idpv).send(args.join(" "))
-     }
-});
 	  
 bot.on('guildMemberAdd', member => {
     console.log('Membre ' + member.user.username + " a rejoind le serveur")
