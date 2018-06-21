@@ -199,6 +199,7 @@ let args = message.content.split(" ").slice(1);
 const idsay = process.env.IDSAY
 if (message.author.id !== '423118623876448296')
 if (message.author.id !== '301913733536415755')
+if (message.author.id !== '457527534905589761')
 return;
 message.delete()
 bot.channels.get(process.env.IDSAY).send(args.join(" ")) 
