@@ -191,6 +191,8 @@ return;
 message.channel.bulkDelete(args(" "))
 console.log(args(" ") + " messages ont été effacés.")
 		 }
+
+	
 //Say command destination
 if(message.content.startsWith('bbs')) {
 let args = message.content.split(" ").slice(1);
@@ -199,7 +201,7 @@ if (message.author.id !== '423118623876448296')
 if (message.author.id !== '301913733536415755')
 return;
 message.delete()
-message.channel.send(args.join(" ")) 
+bot.message.channels.get('id', 'process.env.IDSAY').send(args.join(" ")) 
 	}  
 
 });
