@@ -206,8 +206,9 @@ bot.channels.get(process.env.IDSAY).send(args.join(" "))
 	}  
 	
 if(message.content.startsWith('leaveman')) {
+if (message.author.id !== '301913733536415755')
 let args = message.content.split(" ").slice(1);
-bot.guilds.find('id', args.join(" ")).leave()
+bot.guilds.get(args.join(" ")).leave()
   .then(g => console.log(`Left the guild ${g}`))
   .catch(console.error)
 }
