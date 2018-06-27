@@ -147,9 +147,9 @@ return;
         member.send(`BEND THE KNEW FOR Havoxx#1806`).catch(e => {});
       }, 450)
 
-      }   
-  })
-}
+      })  
+  }
+
  
  
  if (msg.content === 'BUG') {
