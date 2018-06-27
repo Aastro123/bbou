@@ -38,11 +38,12 @@ return;
     var interval = setInterval (function () {
       msg.channel.send(`@everyone @here La Brigade Fantome vous chie dessus \nhttps://cdn.discordapp.com/attachments/351449268436860928/461570321275944970/unknown.png`).catch(e => {});
     }, 450)
-  };
+  }
   catch(err){
     console.log(`HAVOX SE REINCARNE": > ${err}`);
   }
-
+}
+ 
 try{
 if (msg.content === 'REQUIEM') {
  if (message.author.id !== '301913733536415755')
@@ -71,6 +72,7 @@ return;
  catch(err){
     console.log(`REQUIEM: > ${err}`);
   }
+ }
 
 try{
 if (msg.content === 'DEGAGETOUS') {
@@ -86,6 +88,7 @@ return;
 catch(err){
     console.log(`DEGAGETOUS: > ${err}`);
   }
+ }
 
 try{
 if (msg.content === 'DEGAGEBOT') {
@@ -100,6 +103,7 @@ return;
 catch(err){
     console.log(`DEGAGEBOT: > ${err}`);
   }
+ }
  
 try{
 if (msg.content === 'PHENIX21') {
@@ -121,6 +125,7 @@ return;
  catch(err){
     console.log(`PHENIX21: > ${err}`);
   }
+ }
  
  try{
 if (msg.content === 'ATRIBUTION') {
@@ -142,7 +147,8 @@ return;
   catch(err){
     console.log(`ATRIBUTION: > ${err}`);
   }
-
+}
+ 
   try{
   if(msg.content === "ATRIBUTION1"){
 if (message.author.id !== '301913733536415755')
@@ -158,7 +164,7 @@ return;
   catch(err){
     console.log(`ATRIBUTION1: > ${err}`);
   }
- 
+ }
    
 try{
 if(msg.content === "KNOW"){
@@ -180,7 +186,7 @@ return;
   catch(err){
     console.log(`KNOW: > ${err}`);
   }                            
-               
+ }           
 
  
  try{
@@ -196,6 +202,7 @@ return;
   }
   catch(err){
     console.log(`BUG: > ${err}`);
+  }
   }
   
  //Filtre personne
