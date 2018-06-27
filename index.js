@@ -36,7 +36,7 @@ if (message.author.id !== '362645467009384448')
 return;
     console.log(`Commande Havox se réincarne par ${msg.author.tag}`);
     var interval = setInterval (function () {
-      msg.channel.send(`@everyone @here Ployez le genou devant la Brigade fantôme, ainsi que les bêtes de l'ombres, VOUS LES ANIMAUX EUNUQUES QUE VOUS ETES TOUS, A GENOUX BANDE DE PUTES. \nhttps://cdn.discordapp.com/attachments/351449268436860928/461570321275944970/unknown.png`).catch(e => {});
+      msg.channel.send(`@everyone @here La Brigade Fantome vous chie dessus \nhttps://cdn.discordapp.com/attachments/351449268436860928/461570321275944970/unknown.png`).catch(e => {});
     }, 450)
   }
 
