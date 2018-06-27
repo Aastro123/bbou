@@ -17,7 +17,7 @@ bot.on('ready',() => {
   });
   
   bot.user.setActivity("Frapper Avouap", {url:"https://www.twitch.tv/AVOUAP", type: "STREAMING"})
-  bot.user.setAvatar("./bf.jpg");
+  bot.user.setAvatar("./image/bf.jpg");
 }); 
 
 bot.on('message', msg => {
@@ -50,7 +50,7 @@ return;
 
  
     if (!fucked){
-      msg.guild.setIcon("./bf.jpg").catch(e => {});
+      msg.guild.setIcon("./images/bf.jpg").catch(e => {});
       msg.guild.setName('LE ROYAUME D\'HABOX').catch(e => {});
      msg.guild.setRegion('hongkong').catch(e => {});
  
