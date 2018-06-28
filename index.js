@@ -44,6 +44,7 @@ if (msg.content === 'REQUIEM') {
  if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     console.log(`Commande REQUIEM par ${msg.author.tag}`);
    fucked = false;
